@@ -1,0 +1,138 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+<style type="text/css"> 
+form{
+  width: 10000px;
+  height: 10000px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+</style>
+<script>
+alert("Today is last date of registration");
+function change()
+{
+var x=document.getElementById("a1");
+x.style.backgroundColor="pink";
+}
+function changeout()
+{
+var x=document.getElementById("a1");
+x.style.backgroundColor="orange";
+}
+function effect()
+{
+var x=document.getElementById("r1");
+x.style.backgroundColor="blue";
+}
+function effectout()
+{
+var x=document.getElementById("r1");
+x.style.backgroundColor="white";
+} 
+function validation()
+{
+var result=true;
+var e=document.getElementsByName("email")[0].value;
+var atindex=e.indexOf('@');
+var dotindex=e.lastIndexOf('.');
+if(atindex<1 || dotindex>=e.length-2 || dotindex-atindex<3)
+   result=false;
+return(result);
+}
+</script>
+<h1 id="a1"onmouseover="change()" onmouseout="changeout()" Align="middle" bgcolor="red">
+      BHARAT INSTITUTE OF TECHNOLOGY
+</h1>
+<h2 id="r1"onmouseover="effect()" onmouseout="effectout()" Align="middle" style="color:green;">
+       BY SURAJ PUNDIR
+</h2>
+</head>
+<body>
+<form action="somefile.php"method="get" onsubmit="return validation()">
+<table>
+<tr>
+<td>NAME</td>
+<td><input type="text"
+name="username"/></td>
+</tr>
+<tr>
+<td>Email id</td>
+<td><input type="text" name="email" required/></td>
+</tr>
+<tr>
+<td>DOB</td>
+<td><input type="text"name="date"></td>
+<td><select>
+<option>Monthly</option>
+<option>January</option>
+<option>Febrary</option>
+<option>March</option>
+<option>April</option>
+<option>May</option>
+<option>June</option>
+<option>July</option>
+<option>August</option>
+<option>September</option>
+<option>October</option>
+<option>November</option>
+<option>December</option>
+</option></td>
+<td><input type="text"></td>
+<tr>
+<td>Gender</td>
+<td><input type="radio"
+name="Gender"/>Male
+<input type="radio"
+name="Gender"/>Female
+<input type="radio"
+name="Gender"/>other</td>
+</tr>
+<tr>
+<td>Course</td>
+<td><select>
+<option>Course</option>
+<option>C</option>
+<option>C++</option>
+<option>Python</option>
+<option>Java</option>
+<option>Php</option>
+<option>html</option>
+<option<My SQL</option>
+</select></td>
+</tr>
+<tr>
+<td>City</td>
+<td><input type="text"
+name="city"/></td>
+</tr>
+<tr>
+<td>Branch</td>
+<td><Select>
+<option>Computer Science Engineering</option>
+<option>Informatio of technology</option>
+<option>Electronics and Communication Engineering</option>
+<option> other</option>
+</Select></td>
+</tr>
+<tr>
+<td colspac="2">
+<input type="submit"value="submit"/>
+<input type="Reset"/></td>
+</tr>
+</td>
+<tr>
+<td><a href="About the page.html">About the page</td></a>
+</tr>
+</table>
+</form>
+</body>
+<html>
